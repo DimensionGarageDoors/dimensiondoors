@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Dimension Doors</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">Dimension Doors</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Menu</a>
+							<ul>
+								<li><a href="generic.html">Services</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="elements.html">Gallery</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html" class="button">Get a Quote</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<h2>Dimension Doors</h2>
+				<p>Professional Garage Door Installations & Repairs in Gauteng</p>
+				<ul class="actions special">
+					<li><a href="contact.html" class="button primary">Get in Touch</a></li>
+					<li><a href="generic.html" class="button">Our Services</a></li>
+				</ul>
+			</section>
+
+			<!-- Main -->
+			<section id="main" class="container">
+
+				<section class="box special">
+					<header class="major">
+						<h2>Secure. Stylish. Reliable.</h2>
+						<p>We provide quality garage doors, automation, and repairs to homeowners and businesses across Gauteng and surrounding areas.</p>
+					</header>
+					<span class="image featured"><img src="images/Wooden Horizontal panels with windows.jpg" alt="Garage door" /></span>
+				</section>
+
+				<!-- UPDATED FEATURES SECTION -->
+				<section class="box special features">
+					<div class="features-row">
+						<section>
+							<span class="icon solid major fa-tools accent2"></span>
+							<h3>Garage Door Installation</h3>
+							<p>We install high-quality garage doors suited to your home's design and security needs. Our range includes roller doors, sectional overhead doors, and tip-up styles — all fitted with expert precision for a long-lasting finish.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-microchip accent3"></span>
+							<h3>Automation</h3>
+							<p>Take the hassle out of your daily routine with automated garage doors. We install durable motor systems and smart remote solutions, ensuring effortless access and enhanced security.</p>
+						</section>
+					</div>
+					<div class="features-row">
+						<section>
+						<span class="icon solid major fa-tools accent4"></span>
+						<h3>Garage Door Repairs</h3>
+						<p>Is your garage door stuck, noisy, or unresponsive? Our expert technicians provide fast and reliable repair services, including fixing broken springs, motors, tracks, and remotes—ensuring your door operates smoothly and safely.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cogs accent5"></span>
+						<h3>Garage Door Maintenance</h3>
+						<p>Keep your garage door in peak condition with regular maintenance. We offer affordable packages that include lubrication, safety checks, alignment tuning, and component inspections to prevent costly breakdowns and extend the life of your system.</p>
+					</section>
+					</div>
+				</section>
+
+				<div class="row">
+					<div class="col-6 col-12-narrower">
+						<section class="box special">
+							<span class="image featured"><img src="images/Before and After Installation.png" alt="Garage automation" /></span>
+							<h3>Professional Craftsmanship</h3>
+							<p>With over two decades of experience, we install each garage door with precision and care.</p>
+							<ul class="actions special">
+								<li><a href="elements.html" class="button alt">View Our Work</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="col-6 col-12-narrower">
+						<section class="box special">
+							<span class="image featured"><img src="images/Gauteng & Surrounding Areas.png" alt="Repair services" /></span>
+							<h3>Fast Response Times</h3>
+							<p>Based in Gauteng, we offer quick and friendly service across the Province and surrounding areas.</p>
+							<ul class="actions special">
+								<li><a href="contact.html" class="button alt">Book a Repair</a></li>
+							</ul>
+						</section>
+				</div>
+
+			</section>
+
+			<!-- CTA -->
+			<section id="cta">
+				<h2>Call us today: 082 464 4476</h2>
+				<p>Need help with your garage door? Contact us for a free quote or on-site inspection in Gauteng and nearby areas.</p>
+				<form onsubmit="sendWhatsAppMessage(); return false;">
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-6 col-12-mobilep">
+						<input type="text" name="name" id="name" placeholder="Your Name" required />
+					</div>
+					<div class="col-6 col-12-mobilep">
+						<input type="text" name="number" id="number" placeholder="Phone Number" required />
+					</div>
+					<div class="col-12">
+						<input type="submit" value="Request Callback" class="fit" />
+					</div>
+				</div>
+			</form>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/dimensiongaragedoors" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/doorsdimension" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="mailto:doorsdimension@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="tel:0824644476" class="icon solid fa-phone"><span class="label">Call</span></a></li>
+				</ul>
+				<div class="footer-info">
+	<ul class="copyright">
+		<li>&copy; Dimension Doors. All rights reserved.</li>
+		
+
+		<!-- Scripts -->
+		<script>
+	function sendWhatsAppMessage() {
+		var name = document.getElementById('name').value;
+		var number = document.getElementById('number').value;
+		var message = encodeURIComponent("Hi, my name is " + name + " and my number is " + number + ". I'm interested in a callback regarding garage doors.");
+		var phoneNumber = "27824644476"; // WhatsApp format (no leading zero, country code included)
+		window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
+	}
+</script>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

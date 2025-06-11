@@ -1,0 +1,436 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+	<title>Gallery - Dimension Doors</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		/* Modal Styles */
+		.modal {
+			position: fixed;
+			z-index: 9999;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			background-color: rgba(0,0,0,0.7);
+			display: none;
+			overflow: auto;
+			padding: 2em 1em;
+			box-sizing: border-box;
+		}
+		.modal-content {
+			background: white;
+			margin: 0 auto;
+			padding: 2em;
+			border-radius: 8px;
+			max-width: 900px;
+			position: relative;
+			box-sizing: border-box;
+		}
+		.modal-close {
+			position: absolute;
+			top: 10px; right: 20px;
+			font-size: 2em;
+			font-weight: bold;
+			cursor: pointer;
+			color: #333;
+		}
+
+		/* Modal Gallery Images */
+		.modal-gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 per row */
+		gap: 1rem;
+		margin-top: 1rem;
+		}
+
+		.modal-gallery img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 8px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.modal-gallery img:hover {
+		transform: scale(1.05); /* subtle zoom */
+		z-index: 2;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		}
+
+		/* Center the View More button exactly under each image */
+		.col-4 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.col-4 ul.actions {
+			margin-top: 0.7em !important;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			padding-left: 0;
+		}
+		.col-4 ul.actions li {
+			margin: 0;
+		}
+	</style>
+</head>
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Dimension Doors</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Main Page</a></li>
+					<li>
+						<a href="#" class="icon solid fa-angle-down">Menu</a>
+						<ul>
+							<li><a href="generic.html">Services</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="projects.html">Projects</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html" class="button">Get a Quote</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header>
+				<h2>Gallery</h2>
+				<p>A look at some of our recent garage door installations, repairs, and automation projects.</p>
+			</header>
+
+			<div class="box">
+
+				<!-- Aluminium Doors Section -->
+				<header>
+					<h3>Aluminium Doors</h3>
+					<p>Modern and stylish aluminium doors designed with durability and low maintenance in mind.</p>
+				</header>
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4">
+						<h4 class="subsection-title">Double Doors</h4>
+						<span class="image fit">
+							<img src="images/Aluminum fluted Double White.jpeg" alt="Single Aluminium Glass Door - Sleek and modern design perfect for contemporary homes." />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-aluminium-double">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Single Doors</h4>
+						<span class="image fit">
+							<img src="images/Aluminum Flutted Single Bronze.jpeg" alt="Double Aluminium Door - Durable and elegant" />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-aluminium-single">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Special Doors</h4>
+						<span class="image fit">
+							<img src="images/Aluminum Cladded with Glass Double Grey.jpeg" alt="Special Aluminium Door - Custom design" />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-aluminium-special">View More</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Aluzink Doors Section -->
+				<header style="margin-top: 3em;">
+					<h3>Aluzink Doors</h3>
+					<p>Robust and reliable, Aluzink doors offer excellent weather resistance and strength for any garage.</p>
+				</header>
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4">
+						<h4 class="subsection-title">Double Doors</h4>
+						<span class="image fit">
+							<img src="images/Aluzink Double.jpg" alt="Double Aluzink Door - Durable and rust-resistant with a clean, metallic finish." />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-aluzink-double">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Single Doors</h4>
+						<span class="image fit">
+							<img src="images/20P Single White.jpg" alt="Single Aluzink Door - Strong and stylish" />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-Aluzink-single">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Special Doors</h4>
+						<span class="image fit">
+							<img src="images/Fan Style Single Charcoal Grey.jpeg" alt="Special Aluzink Door - Custom features" />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-Aluzink-special">View More</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Wooden Doors Section -->
+				<header style="margin-top: 3em;">
+					<h3>Wooden Doors</h3>
+					<p>Classic and elegant wooden doors crafted to enhance the natural look of your home's exterior.</p>
+				</header>
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4">
+						<h4 class="subsection-title">Double Doors</h4>
+						<span class="image fit">
+							<img src="images/40P Double Wood.jpeg" alt="Double Wooden Slatted Panel Door - A warm, natural finish that adds charm and elegance." />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-wooden-double">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Single Doors</h4>
+						<span class="image fit">
+							<img src="images/30p Single Wood.jpeg" alt="Single Wooden Offset Panel Door - Beautifully crafted with distinctive paneling." />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-wooden-single">View More</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h4 class="subsection-title">Special Doors</h4>
+						<span class="image fit">
+							<img src="images/Barnstable Double Wood.jpeg" alt="Dark Double Slatted Wooden Door - Rich wood tones for a bold and sophisticated look." />
+						</span>
+						<ul class="actions">
+							<li><a href="#" class="button small view-more-btn" data-modal="modal-wooden-special">View More</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/dimensiongaragedoors" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/doorsdimension" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="mailto:doorsdimension@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="tel:0824644476" class="icon solid fa-phone"><span class="label">Call</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Dimension Doors. All rights reserved.</li>
+				<li>Located: Gauteng</li>
+			</ul>
+			<br />
+		</footer>
+
+	</div>
+
+	<!-- Modal Popups -->
+	<!-- Aluminium Doors Modal -->
+	<!-- DOUBLE DOORS MODAL -->
+<div id="modal-aluminium-double" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-aluminium-double-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-aluminium-double-title">Double Aluminium Doors</h3>
+		<p>Explore our range of durable and elegant double aluminium doors.</p>
+		<div class="modal-gallery">
+			<img src="images/Aluminum fluted Double Charcoal grey.jpeg" alt="Double Aluminium Door 1" />
+			<img src="images/Aluminum fluted Double White.jpeg" alt="Double Aluminium Door 2" />
+		</div>
+	</div>
+</div>
+
+<!-- SINGLE DOORS MODAL -->
+<div id="modal-aluminium-single" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-aluminium-single-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-aluminium-single-title">Single Aluminium Doors</h3>
+		<p>Explore our sleek and modern single aluminium door designs.</p>
+		<div class="modal-gallery">
+			<img src="images/2 x Aluminum Flute Single Bronze.jpeg" alt="Single Aluminium Door 1" />
+			<img src="images/2x Aluminum Flute Single Bronze 2.jpeg" alt="Single Aluminium Door 2" />
+			<img src="images/Aluminum fluted Single Charcoal  grey.jpeg" alt="Single Aluminium Door 3" />
+		</div>
+	</div>
+</div>
+
+<!-- SPECIAL DOORS MODAL -->
+<div id="modal-aluminium-special" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-aluminium-special-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-aluminium-special-title">Special Aluminium Doors</h3>
+		<p>Check out our custom aluminium doors built to suit unique requirements.</p>
+		<div class="modal-gallery">
+			<img src="images/AluminiumGlassSingle.jpg" alt="Special Aluminium Door 1" />
+			<img src="images/Aluminum Cladded 10P Single Charcoal grey.jpeg" alt="Special Aluminium Door 2" />
+			<img src="images/Aluminum Cladded Tuscan Single White.jpeg" alt="Special Aluminium Door 3" />
+			<img src="images/Aluminum Cladded with Glass Double Grey.jpeg" alt="Special Aluminium Door 4" />
+			<img src="images/Glass Frame 20p Double White.jpeg" alt="Special Aluminium Door 5" />
+			<img src="images/Glass frame 10P Single White.jpeg" alt="Special Aluminium Door 6" />
+		</div>
+	</div>
+</div>
+
+	<!-- Aluzink Doors Modal -->
+		<!-- DOUBLE DOORS MODAL -->
+<div id="modal-aluzink-double" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-aluzink-double-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-aluzink-double-title">Double Aluzink Doors</h3>
+		<p>Discover the robust and reliable Aluzink doors offering excellent weather resistance and strength.</p>
+		<div class="modal-gallery">
+			<img src="images/Aluzink Double.jpg" alt="Double Aluzink Door" />
+			<img src="images/40P Double Bronze.jpeg" alt="Double Aluzink Door 2" />
+			<img src="images/40P Double Brown.jpeg" alt="Double Aluzink Door 3" />
+			<img src="images/40P Double Charcoal grey.jpeg" alt="Double Aluzink Door 4" />
+			<img src="images/40P Double White.jpeg" alt="Double Aluzink Door 5" />
+			<img src="images/Slatted Double Bronze.jpeg" alt="Double Aluzink Door 6" />
+			<img src="images/Slatted Double Charcoal grey.jpeg" alt="Double Aluzink Door 7" />
+			<img src="images/Slatted Double Wood look.jpeg" alt="Double Aluzink Door 8" />
+		</div>
+	</div>
+</div>
+
+<!-- SINGLE DOORS MODAL -->
+<div id="modal-Aluzink-single" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-Aluzink-single-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-Aluzink-single-title">Single Aluzink Doors</h3>
+		<p>Discover the robust and reliable Aluzink doors offering excellent weather resistance and strength</p>
+		<div class="modal-gallery">
+			<img src="images/20p Single White.jpeg" alt="Single Aluzink Door" />
+			<img src="images/20P Single Bronze.jpeg" alt="Single Aluzink Door 2" />
+			<img src="images/20P Single White.jpg" alt="Single Aluzink Door 3" />
+			<img src="images/Roll up Aluzink Single Brown.jpeg" alt="Single Aluzink Door 4" />
+			<img src="images/Roll up Aluzink Single Charcoal grey.jpeg" alt="Single Aluzink Door 5" />
+			<img src="images/Roll up Aluzink Single White.jpeg" alt="Single Aluzink Door 6" />
+			<img src="images/Side by Side 20P Single Bronze.jfif" alt="Single Aluzink Door 7" />
+			<img src="images/Side by Side Brown Single Sectional Panel door.jpg" alt="Single Aluzink Door 8" />
+			<img src="images/Slatted Single Bronze.jpeg" alt="Single Aluzink Door 9" />
+		</div>
+	</div>
+</div>
+
+<!-- SPECIAL DOORS MODAL -->
+<div id="modal-Aluzink-special" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-Aluzink-special-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-Aluzink-special-title">Special Aluzink Doors</h3>
+		<p>Check out our custom Aluzink doors built to suit unique requirements.</p>
+		<div class="modal-gallery">
+			<img src="images/Fan Style Single Bronze.jpeg" alt="Special Aluzink Door" />
+			<img src="images/Fan Style Single Charcoal Grey.jpeg" alt="Special Aluzink Door 2" />
+			<img src="images/Fan Style Single Wood look.jpeg" alt="Special Aluzink Door 3" />
+		</div>
+	</div>
+</div>
+
+	<!-- Wooden Doors Modal -->
+	<!-- DOUBLE DOORS MODAL -->
+<div id="modal-wooden-double" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-wooden-double-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-wooden-double-title">Double Wooden Doors</h3>
+		<p>Classic and elegant wooden doors crafted to enhance the natural beauty of your home's exterior.</p>
+		<div class="modal-gallery">
+			<img src="images/40P Double Wood.jpeg" alt="Double Wooden Door" />
+			<img src="images/40P Double Wood 2.jpg" alt="Double Wooden Door 2" />
+			<img src="images/Horizontal Slatted Finger Joint Double Wood.jpeg" alt="Double Wooden Door 3" />
+		</div>
+	</div>
+</div>
+
+<!-- SINGLE DOORS MODAL -->
+<div id="modal-wooden-single" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-wooden-single-title" tabindex="-1">
+	<div class="modal-content" role="document">
+		<span class="modal-close" aria-label="Close modal">&times;</span>
+		<h3 id="modal-wooden-single-title">Single Wooden Doors</h3>
+		<p>Classic and elegant wooden doors crafted to enhance the natural beauty of your home's exterior.</p>
+		<div class="modal-gallery">
+			<img src="images/Horizontal slatted Solid Single Wood.jpeg" alt="Single Wooden Door" />
+			<img src="images/20p Single Wood.jpeg" alt="Single Wooden Door 2" />
+			<img src="images/30p Single Wood.jpeg" alt="Single Wooden Door 3" />
+		</div>
+	</div>
+</div>
+
+<!-- SPECIAL DOORS MODAL -->
+	<div id="modal-wooden-special" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-wooden-special-title" tabindex="-1">
+		<div class="modal-content" role="document">
+			<span class="modal-close" aria-label="Close modal">&times;</span>
+			<h3 id="modal-wooden-special-title">Special Wooden Doors</h3>
+			<p>Check out our custom Wooden doors built to suit unique requirements.</p>
+			<div class="modal-gallery">
+				<img src="images/Tuscan Single Wood.jpg" alt="Special Wooden Door 1" />
+				<img src="images/Gothic 10P Single Wood.jpeg" alt="Special Wooden Door 2" />
+				<img src="images/10P Single Wood.jpeg" alt="Special Wooden Door 3" />
+				<img src="images/Wooden Horizontal panels with windows.jpg" alt="Special Wooden Door 4" />
+				<img src="images/Barnstable Double Wood.jpeg" alt="Special Wooden Door 5" />
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		// Modal open/close logic
+		document.addEventListener('DOMContentLoaded', function() {
+			// Open modal when "View More" clicked
+			document.querySelectorAll('.view-more-btn').forEach(function(btn) {
+				btn.addEventListener('click', function(e) {
+					e.preventDefault();
+					var modalId = btn.getAttribute('data-modal');
+					if (modalId) {
+						var modal = document.getElementById(modalId);
+						if (modal) {
+							modal.style.display = 'block';
+							modal.setAttribute('aria-hidden', 'false');
+							modal.querySelector('.modal-close').focus();
+						}
+					}
+				});
+			});
+
+			// Close modal on clicking close button or outside modal content
+			document.querySelectorAll('.modal').forEach(function(modal) {
+				modal.addEventListener('click', function(e) {
+					if (e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+						modal.style.display = 'none';
+						modal.setAttribute('aria-hidden', 'true');
+					}
+				});
+			});
+
+			// Also close modal on Escape key press
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape') {
+					document.querySelectorAll('.modal').forEach(function(modal) {
+						if (modal.style.display === 'block') {
+							modal.style.display = 'none';
+							modal.setAttribute('aria-hidden', 'true');
+						}
+					});
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+
